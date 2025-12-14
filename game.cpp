@@ -4,7 +4,6 @@ using namespace std;
 char board[9] = { '1','2','3','4','5','6','7','8','9' };
 char currentPlayer = 'X';
 
-// Function to display board
 void displayBoard() {
     cout << "\n";
     cout << " " << board[0] << " | " << board[1] << " | " << board[2] << "\n";
@@ -13,13 +12,9 @@ void displayBoard() {
     cout << "---|---|---\n";
     cout << " " << board[6] << " | " << board[7] << " | " << board[8] << "\n\n";
 }
-
-// Function to switch player
 void switchPlayer() {
     currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
 }
-
-// Function to check win
 bool checkWin() {
     int winPatterns[8][3] = {
         {0,1,2}, {3,4,5}, {6,7,8},
@@ -81,3 +76,4 @@ int main() {
 
     return 0;
 }
+
